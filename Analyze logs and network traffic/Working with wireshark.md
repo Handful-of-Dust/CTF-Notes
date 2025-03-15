@@ -1,4 +1,4 @@
-# If your file ends in .pcap or .pcapng...
+# If your file ends in .pcap or .pcapng
 
 That means you're going to be working with [Wireshark](https://www.wireshark.org/docs/). Because it's so common, I've compiled a list of my most commonly used Wireshark features.
 
@@ -15,15 +15,15 @@ Click the statistics menu and take a look at some of the basic qualities of the 
 
 If you know the number of a packet you want to look at but don't want to scroll to it, you can click Go > Go to packet and enter the number of the packet in the box that appears just under the display filter bar.
 
-If you are hunting for a partular string in the contents of a packet, you can find that by clicking Edit > Find Packet. On the dropdown, you can choose whether you're searching via display filter, hex value, string, or regular expression. Then you can enter the data you want to search for. This is useful if you want to find all instances of clients sending a POST request to a server or something like that. 
+If you are hunting for a partular string in the contents of a packet, you can find that by clicking Edit > Find Packet. On the dropdown, you can choose whether you're searching via display filter, hex value, string, or regular expression. Then you can enter the data you want to search for. This is useful if you want to find all instances of clients sending a POST request to a server or something like that.
 
-If you've found an interesting packet, right click it and select Follow > TCP stream (or whatever the protocol happens to be). Always do this, even if you don't think it will be useful. 
+If you've found an interesting packet, right click it and select Follow > TCP stream (or whatever the protocol happens to be). Always do this, even if you don't think it will be useful.
 
 ## Using display filters
 
 * You can use boolean operators (AND, OR, etc.) to join multiple queries
 * Use != for negation
-* You can use ip.src == to find all packets with a particular source IP, ip.dst == to do the same with destinatin IP, or just ip.addr == to find all packets that contain a particular IP address. 
+* You can use ip.src == to find all packets with a particular source IP, ip.dst == to do the same with destinatin IP, or just ip.addr == to find all packets that contain a particular IP address.
 * You can also filter for ports (for example, tcp.port eq 443)
 * [More information here](https://wiki.wireshark.org/DisplayFilters)
 
