@@ -6,11 +6,19 @@ In CTF events, it's not uncommon for some of the challenges to involve files tha
 
 ### Exiftool
 
-A very useful utility for examinging file metadata.
+A very useful utility for examinging file metadata. Many challenges ask for details that are in the metadata of a file, such as timestamps or comments.
 
 ### File
 
 A Linux command-line tool for checking the type of a particular file. This can be useful if you have a file that doesn't have an extension or has an incorrect one. Example: `file fileofinterest.extension`
+
+### Binwalk
+
+A tool for finding data embedded in files. The basic syntax is `binwalk nameoffile.extension -flag`. The [man page](https://www.kali.org/tools/binwalk/) shows all of the many flags that are available. The ones I use most frequently are `-e` (to automatically extract any files binwalk can detect) and `-M`, which recursively scans extracted files.
+
+### xxd
+
+Tool for creating hex dumps from files. This can be useful if you are given a file that won't open. It could be that the data inside (usually some of the bytes that form the file signatures) has been corrupted, and you may have to repair it manually. For example: `xxd messedupfile.png` will create a hex dump of messedupfile.png. It also has some [options](https://www.geeksforgeeks.org/xxd-command-in-linux/). To save the hexdump as a new file, you would want to do this: `xxd badfile.png > hexdump.hex`. You could then open the hexdump in the text editor of your choice and edit both the bytes and the ASCII representation to fix the underlying problem. Then you would use `xxd -r hexdump.hex fixed.png` to convert the hexdump back into a binary file, which you should be able to open.
 
 ## Tools with a graphical user interface
 
