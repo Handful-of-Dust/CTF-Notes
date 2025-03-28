@@ -4,5 +4,14 @@ When data is encoded, it's really just put in a different format so that it can 
 
 ## Recognizing Types of Encoded Data
 
+### Binary
+
+Will usually be pretty easy to identify since it's just ones and zeroes.
+
+### Decimal
+
+If you see a series of numbers that don't look like a substitution cipher and they're all between roughly 97 through 122 (numbers outside of this range are likely special characters), you may be looking at decimal numbers that represent ASCII characters. This is pretty easy to solve; CyberChef has a "from decimal" recipe.
+
 ### Base64
 
+Base64 is quite common and easy to recognize. It contains the following characters: A-Z, a-z, 0-9, +, /, =.

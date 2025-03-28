@@ -6,7 +6,7 @@ In CTF events, it's not uncommon for some of the challenges to involve files tha
 
 ### Exiftool
 
-A very useful utility for examinging file metadata. Many challenges ask for details that are in the metadata of a file, such as timestamps or comments.
+A very useful utility for examinging file metadata. Many challenges ask for details that are in the metadata of a file, such as timestamps or comments. It can also be used to change or remove metadata, but that's not always necessary. Usually, you can just enter `exiftool file.extension`.
 
 ### File
 
@@ -19,6 +19,10 @@ A tool for finding data embedded in files. The basic syntax is `binwalk nameoffi
 ### xxd
 
 Tool for creating hex dumps from files. This can be useful if you are given a file that won't open. It could be that the data inside (usually some of the bytes that form the file signatures) has been corrupted, and you may have to repair it manually. For example: `xxd messedupfile.png` will create a hex dump of messedupfile.png. It also has some [options](https://www.geeksforgeeks.org/xxd-command-in-linux/). To save the hexdump as a new file, you would want to do this: `xxd badfile.png > hexdump.hex`. You could then open the hexdump in the text editor of your choice and edit both the bytes and the ASCII representation to fix the underlying problem. Then you would use `xxd -r hexdump.hex fixed.png` to convert the hexdump back into a binary file, which you should be able to open.
+
+### TestDisk
+
+Command-line tool for recovering data from disk images. The [documentation](https://www.cgsecurity.org/testdisk.pdf) has sections on recovering deleted files and partitions.
 
 ## Tools with a graphical user interface
 

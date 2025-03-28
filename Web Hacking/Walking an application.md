@@ -8,4 +8,7 @@ Take a look at the HTML and determine whether there's anything interesting. Comm
 
 ## 2. Use the Developer Tools
 
-Personally, I really like Chrome's developer tools and use them for most challenges. Things you can find with developer tools include: 
+Personally, I really like Chrome's developer tools and use them for most challenges. Things to check in developer tools include:
+
+* On the network tab, requests to and from the server (which can be helpful if you are trying to get around a login form or upload a specific type of file).
+* The console, where you can interact with JavaScript in the webpage. If the challenge uses some form of client-side authentication, for example, you may be able to print valid credentials with the console using `console.log(variable)`.
